@@ -3,7 +3,7 @@ import { useStorageListener } from './useStorageListener';
 import './ChangeAlert.css';
 
 function ChangeAlert({ sincronize }) {
-    const {
+    let {
         show,
         toggleShow
     } = useStorageListener(sincronize);
@@ -17,7 +17,6 @@ function ChangeAlert({ sincronize }) {
                         className="TodoForm-button TodoForm-button--add"
                         onClick={() =>
                             show = toggleShow(false)
-
                         }
                     >
                         ¡Yes!
