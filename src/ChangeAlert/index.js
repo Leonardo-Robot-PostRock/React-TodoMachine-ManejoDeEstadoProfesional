@@ -3,7 +3,7 @@ import { useStorageListener } from './useStorageListener';
 import './ChangeAlert.css';
 
 function ChangeAlert({ sincronize }) {
-    let {
+    const {
         show,
         toggleShow
     } = useStorageListener(sincronize);
@@ -15,8 +15,7 @@ function ChangeAlert({ sincronize }) {
                     <p>¿Quieres sincronizar tus TODOs?</p>
                     <button
                         className="TodoForm-button TodoForm-button--add"
-                        onClick={() =>
-                            show = toggleShow(false)
+                        onClick={() => { toggleShow }
                         }
                     >
                         ¡Yes!
