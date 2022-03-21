@@ -75,7 +75,6 @@ function useLocalStorage(itemName, initialValue) {
 
       } catch (error) {
         onError(error);
-        // setError(error);
       }
     }, 3000);
   }, [sincronizedItem]);

@@ -11,12 +11,12 @@ import { EmptyTodos } from '../EmptyTodos';
 import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
-import { ChangeAlert, ChangeAlertWhitStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert/';
 
 //COMPOSICIÓN DE COMPONENTES
 
-function App() {
-  const { stateUpdaters, state } = useTodos();
+const App = () => {
+  const { state, stateUpdaters } = useTodos();
   const {
     error,
     loading,
@@ -29,11 +29,11 @@ function App() {
   } = state;
 
   const {
-    deleteTodo,
     setOpenModal,
-    setSearchValue,
     addTodo,
-    sincronizeTodos
+    deleteTodo,
+    setSearchValue,
+    sincronizeTodos,
   } = stateUpdaters;
   return (
     <React.Fragment>

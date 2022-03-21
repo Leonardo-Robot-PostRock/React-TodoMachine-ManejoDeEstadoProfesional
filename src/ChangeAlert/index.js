@@ -15,8 +15,7 @@ function ChangeAlert({ sincronize }) {
                     <p>¿Quieres sincronizar tus TODOs?</p>
                     <button
                         className="TodoForm-button TodoForm-button--add"
-                        onClick={() => { toggleShow }
-                        }
+                        onClick={toggleShow}
                     >
                         ¡Yes!
                     </button>
