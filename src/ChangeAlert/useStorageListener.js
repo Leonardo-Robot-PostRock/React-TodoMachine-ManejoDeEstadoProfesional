@@ -12,7 +12,7 @@ function useStorageListener(sincronize) {
 
     const toggleShow = () => {
         sincronize();
-        setStorageChange(false)
+        setStorageChange(false);
     }
 
     return {

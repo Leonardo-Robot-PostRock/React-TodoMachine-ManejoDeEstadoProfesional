@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
-const TodoContext = React.createContext();
 
 function useTodos() {
   const {
@@ -69,6 +68,7 @@ function useTodos() {
     addTodo,
     deleteTodo,
     setOpenModal,
+    sincronizeTodos
   };
   return {state, stateUpdaters}
 }

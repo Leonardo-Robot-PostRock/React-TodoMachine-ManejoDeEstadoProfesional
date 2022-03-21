@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 const initialState = ({ initialValue }) => ({
@@ -58,7 +58,7 @@ function useLocalStorage(itemName, initialValue) {
   const onSincronize = () => dispatch({ type: actionTypes.sincronize })
 
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       try {
         const localStorageItem = localStorage.getItem(itemName);
@@ -98,7 +98,7 @@ function useLocalStorage(itemName, initialValue) {
     saveItem,
     loading,
     error,
-    sincronizeItem
+    sincronizeItem,sincronizedItem
   };
 }
 export { useLocalStorage };
