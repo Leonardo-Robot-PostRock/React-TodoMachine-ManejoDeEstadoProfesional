@@ -98,7 +98,7 @@ function useLocalStorage(itemName, initialValue) {
     saveItem,
     loading,
     error,
-    sincronizeItem,sincronizedItem
+    sincronizeItem,
   };
 }
 export { useLocalStorage };
